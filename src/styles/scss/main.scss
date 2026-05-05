@@ -1,7 +1,8 @@
-// vendor imports
-
 // base imports
 @use './base/base';
 
 
-// layout imports
+html,
+body {
+  overflow-x: hidden;
+}

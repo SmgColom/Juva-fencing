@@ -146,8 +146,8 @@
     grid-template-columns: repeat(3, minmax(0, 1fr));
     gap: 0.6rem;
   }
-    @media (min-width: 390px) and (max-width: 843px) {
-    
+    @media (min-width: 390px) and (max-width: 767px) {
+    grid-template-columns: 1fr;
     gap: 0.5rem;
   }
 }
@@ -206,6 +206,10 @@
     font-weight: 700;
     font-size: 1.1rem;
     color: $complementaryColor;
+  }
+
+  @media (max-width: 767px) {
+     width: 100%;
   }
 }
 
