@@ -28,7 +28,7 @@ export default function Hero() {
           </Button>
         </div>
 
-        <div>
+        <div className={styles.rightWrapper}>
           <Image
             className={styles.right}
             src="/Logo.png"

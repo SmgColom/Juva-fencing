@@ -1,22 +1,24 @@
 import styles from "./ContactSection.module.scss";
 import ContactForm from "./ContactForm";
 import ContactInfo from "./ContactInfo";
+import Container from "@/components/common/Container/Container";
 
 export default function ContactSection() {
   return (
-        <section className={styles.wrapper}>
-            <h2 className={styles.title}>Contact Us</h2>
-            <div className={styles.ContactContainer}>
-                <div ClassName={styles.ContactForm}>
-                <ContactForm />
-                </div>
-                <div ClassName={styles.ContactInfo}>
-                <ContactInfo />
-                </div>
-                
-            </div>
-        </section>
-    );
+    <section className={styles.wrapper}>
+      <Container>
+        <h2 className={styles.title}>Contact Us</h2>
+        <div className={styles.ContactContainer}>
+          <div className={styles.ContactForm}>
+            <ContactForm />
+          </div>
+          <div className={styles.ContactInfo}>
+            <ContactInfo />
+          </div>
+        </div>
+      </Container>
+    </section>
+  );
 }
 
 

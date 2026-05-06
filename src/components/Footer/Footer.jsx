@@ -8,13 +8,20 @@ function Footer() {
 
   return (
     <div className={styles.footerwrapper}>
+      <div className={styles.footerInner}>
         <div className={styles.socialIcons}>
-          <a href="https://www.instagram.com/juvacleaning/
-          " title="Instagram" aria-label="Instagram" target="_blank" rel="noopener noreferrer"><GrInstagram  size={30}/></a>
-          <a href="https://www.facebook.com/profile.php?id=61586076317653" title="Facebook" aria-label="Facebook" target="_blank" rel="noopener noreferrer"><FaFacebook size={30} /></a>
-          <a href="https://www.tiktok.com/@juva_cleaning?lang=en" title="Tiktok" aria-label="Tiktok" target="_blank" rel="noopener noreferrer"><AiFillTikTok size={30} /></a>
+          <a href="https://www.instagram.com/juvacleaning/" title="Instagram" aria-label="Instagram" target="_blank" rel="noopener noreferrer">
+            <GrInstagram size={30}/>
+          </a>
+          <a href="https://www.facebook.com/profile.php?id=61586076317653" title="Facebook" aria-label="Facebook" target="_blank" rel="noopener noreferrer">
+            <FaFacebook size={30} />
+          </a>
+          <a href="https://www.tiktok.com/@juva_cleaning?lang=en" title="Tiktok" aria-label="Tiktok" target="_blank" rel="noopener noreferrer">
+            <AiFillTikTok size={30} />
+          </a>
         </div>
         <span>&copy; {getCurrentYear()}</span>
+      </div>
     </div>
   );
 }

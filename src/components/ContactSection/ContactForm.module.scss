@@ -1,18 +1,15 @@
 @use "sass:color";
 @use '@/styles/scss/abstracts/' as *;
 
-
 .form {
   display: flex;
   flex-direction: column;
   width: 100%;
-  max-width: 50rem;
   gap: 1rem;
 
   input,
   textarea {
     padding: 0.8rem;
-    padding-bottom: 1rem;
     border: 1px solid $highlightColor;
     border-radius: 6px;
     font-size: 1.1rem;
@@ -21,39 +18,51 @@
     box-shadow: 0 1px 2px;
     width: 100%;
     outline: none;
+    box-sizing: border-box;
+
+    @media (max-width: 767px) {
+      font-size: 1rem;
+    }
   }
 
   small {
     color: red;
     font-size: 0.9rem;
   }
-
-  .contact__successMessage {
-    color: green;
-    font-weight: bold;
-    margin-top: 1rem;
-    text-align: center;
-  }
 }
 
+.contact__successMessage {
+  color: green;
+  font-weight: bold;
+  margin-top: 1rem;
+  text-align: center;
+}
 
 .infoBox {
-  padding-top: 0.4rem;
   display: flex;
   flex-direction: column;
-  align-items: right;
-  justify-content: center;
-  text-align: right;
+  gap: 1rem;
   color: $complementaryColor;
   font-size: 1.4rem;
-  width: 100%;
-  max-width: 35rem;
+  text-align: right;
 
   h3 {
     margin: 0;
     font-size: 1.5rem;
     color: $complementaryColor;
-    text-align: right;
+  }
+
+  p {
+    margin: 0;
+  }
+
+  @media (max-width: 1023px) {
+    text-align: center;
+    align-items: center;
+
+    h3 {
+      text-align: center;
+    }
   }
 }
 
@@ -61,56 +70,6 @@
   font-size: 2.5rem;
   color: $complementaryColor;
   margin-bottom: 0.5rem;
-}
-
-.QrBox {
-  text-align: center;
-  gap: 10px;
-  padding-top: 20px;
-}
-
-
-@media (max-width: 1023px) {
-  .form {
-    margin-left: 0;
-    max-width: 100%;
-  }
-
-  .infoBox {
-    max-width: 100%;
-    margin-top: 2rem;
-  }
-}
-
-@media (max-width: 768px) {
-  .form {
-    gap: 0.8rem;
-
-    input,
-    textarea {
-      font-size: 1rem;
-    }
-  }
-
-  .infoBox {
-    h3 {
-      font-size: 2rem;
-      text-align: center;
-    }
-    p {
-      text-align: center;
-    }
-
-    .infoBox {
-      text-align: center;
-      align-items: center;
-    }
-
-    .contact__icon { 
-      align-items: center;
-      text-align: center;
-    }
-  }
 }
 
 

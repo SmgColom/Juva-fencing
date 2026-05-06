@@ -1,10 +1,10 @@
 @use "sass:color";
 @use "@/styles/scss/abstracts" as *;
 
-.wrapper{
+.wrapper {
   width: 100%;
   display: flex;
-  justify-content: center; 
+  justify-content: center;
 }
 
 .card {
@@ -14,15 +14,13 @@
   padding: 3rem 2.5rem;
   text-align: center;
   width: 100%;
-  max-width: 350px;
-  min-height: 380px;
+  min-height: 320px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   gap: 1.2rem;
-
   box-shadow: 0 6px 16px rgba(0, 0, 0, 0.06);
-  overflow: hidden;
+  box-sizing: border-box;
 }
 
 .name {
@@ -58,35 +56,10 @@
   line-height: 1;
 }
 
-
-@media (min-width: 1024px) and (max-width: 1366px) {
+@media (max-width: 767px) {
   .card {
-    max-width: 300px;      
-    min-height: 340px;
-    padding: 2.2rem 2rem;
-    gap: 1rem;
-  }
-
-  .quoteStart {
-    font-size: 3.2rem;
-    top: 1.2rem;
-    left: 1.6rem;
-  }
-
-  .quoteEnd {
-    font-size: 2.4rem;
-    bottom: 1.2rem;
-    right: 1.6rem;
-  }
-}
-
-@media (max-width: 1024px) {
-  .card {
-    max-width: 250px;
-    height: 300px;
-    min-height: unset;
-    padding: 2rem 1.8rem;
-
+    min-height: 260px;
+    padding: 2.5rem 2rem;
   }
 }
 

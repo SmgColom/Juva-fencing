@@ -3,62 +3,41 @@
 
 .wrapper {
   background-color: $primaryColor;
-  padding: 2rem 1rem 0 0;
-  width: 100vw;
-  position: relative;
-  left: 50%;
-  right: 50%;
-  margin-left: -50vw;
-  margin-right: -50vw;
-  overflow: hidden;
+  padding: 3rem 0;
+  width: 100%;
+}
 
-  .title {
-    text-align: center;
-    width: 100%;
-    font-size: 3rem;
-    font-family: "Work Sans", sans-serif;
-    color: $complementaryColor;
-    margin-bottom: 0.5rem;
+.title {
+  text-align: center;
+  font-size: 3rem;
+  font-family: "Work Sans", sans-serif;
+  color: $complementaryColor;
+  margin-bottom: 0.5rem;
+
+  @media (max-width: 767px) {
+    font-size: 2.4rem;
   }
 }
 
-.qrBox {
-  max-width: 1250px;
-  margin: 0 auto;
-  padding: 0 9rem 3rem 5rem;
-  display: flex;
-  flex-direction: column;
-  align-items: stretch;
-  gap: 1.5rem;
-
-  h3 {
-    margin: 0;
-    font-size: 1.4rem;
-    color: $complementaryColor;
-    text-align: center;
-  }
-
-  @media (min-width: 1024px) and (max-width: 1365px) {
-    max-width: 1200px;
-    padding: 0 8rem 3rem 6rem;
-  }
-
-  @media (max-width: 767px) {
-    padding: 0 1.5rem 2rem;
-  }
+.subtitle {
+  font-size: 1.4rem;
+  color: $complementaryColor;
+  text-align: center;
+  margin: 0 0 2rem;
 }
 
 .qrImages {
-  width: 100%;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 2.5rem;
-  align-items: stretch;
+
+  @media (max-width: 600px) {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
 }
 
 .qrItem {
-  width: 100%;
-  min-height: 280px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -68,87 +47,17 @@
   background: $brandColor;
   border-radius: 32px;
   box-sizing: border-box;
-}
 
-.qrItem h4 {
-  font-size: 1.2rem;
-  font-weight: 700;
-  color: $complementaryColor;
-  margin: 0;
-}
-
-.qrItem :global(img) {
-  width: auto;
-  height: auto;
-  max-width: 160px;
-}
-
-.note {
-  font-size: 1rem;
-  color: #667085;
-  margin-top: 0.25rem;
-}
-
-@media (max-width: 1023px) {
-
-
-  .qrBox {
-    padding: 0 5rem 3rem 2.5rem;
+  h4 {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: $complementaryColor;
+    margin: 0;
   }
 
-
-  .qrImages {
-   max-width: 1000px;
-    gap: 3rem;
-    margin-left: 1.5rem;
-   
-  }
-
-  .qrItem {
-    min-height: 240px;
-    padding: 1.75rem 1.25rem;
-  }
-}
-
-@media (max-width: 767px) {
-  .wrapper {
-    padding: 3rem 0 0;
-  }
-
-  .wrapper .title {
-    font-size: 2.4rem;
-  }
-
-  .qrItem {
-    min-height: 220px;
-    padding: 1.5rem 1rem;
-    border-radius: 22px;
-  }
-
-  .qrItem h4 {
-    font-size: 1.05rem;
-  }
-
-  .qrItem :global(img) {
-    max-width: 130px;
-  }
-}
-
-@media (max-width: 480px) {
-  .wrapper .title {
-    font-size: 2rem;
-  }
-
-  .qrImages {
-    gap: 1rem;
-  }
-
-  .qrItem {
-    padding: 1.25rem 0.75rem;
-    border-radius: 18px;
-  }
-
-  .qrItem :global(img) {
-    max-width: 110px;
+  img {
+    width: auto;
+    height: auto;
+    max-width: 160px;
   }
 }

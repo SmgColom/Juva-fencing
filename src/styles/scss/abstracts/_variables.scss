@@ -7,3 +7,11 @@ $brandColor:#D6DFC1;
 
 $highlightColor: #F9CDCD;
 $dangerColor: #7f1d1d;
+
+// SPACING SYSTEM — mismo margen horizontal en todo el sitio
+$padding-desktop: 0 5rem;      // > 1024px
+$padding-tablet: 0 3rem;       // 768px - 1023px
+$padding-mobile: 0 1.5rem;     // < 768px
+$max-width: 1200px;
+
+

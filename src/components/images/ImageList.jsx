@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { photos } from "../../data/photos.js";
 import ImagesCard from "./ImagesCard.jsx";
 import styles from "./ImageList.module.scss";
+import Container from "@/components/common/Container/Container";
 
 export default function ImagesList() {
   const [index, setIndex] = useState(0);
@@ -20,14 +21,14 @@ export default function ImagesList() {
 
   return (
     <section className={styles.wrapper}>
-      <div className={styles.content}>
+      <Container>
         <h2 className={styles.title}>See For Yourself</h2>
         <div className={styles.grid}>
           {visible.map((photo) => (
             <ImagesCard key={photo.id} photo={photo} />
           ))}
         </div>
-      </div>
+      </Container>
     </section>
   );
 }

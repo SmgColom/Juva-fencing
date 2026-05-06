@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { testimonies } from "../../data/testimonies.js";
 import TestimonyCard from "./TestimonyCard.jsx";
 import styles from "./TestimonyList.module.scss";
+import Container from "@/components/common/Container/Container";
 
 export default function TestimoniesList() {
   const [index, setIndex] = useState(0);
@@ -20,14 +21,14 @@ export default function TestimoniesList() {
 
   return (
     <div className={styles.wrapper}>
-      <div className={styles.content}>
+      <Container>
         <h2 className={styles.title}>What Our Clients Say</h2>
         <div className={styles.grid}>
           {visible.map((testimony) => (
             <TestimonyCard key={testimony.id} testimony={testimony} />
           ))}
         </div>
-      </div>
+      </Container>
     </div>
   );
 }

@@ -2,27 +2,24 @@
 @use "@/styles/scss/abstracts" as *;
 
 .wrapper {
-  background-color: white;
   width: 100%;
 }
 
 .card {
-  margin: 0 auto;
   position: relative;
   background-color: $primaryColor;
   border-radius: 32px;
   padding: 3rem 2.5rem;
   text-align: center;
   width: 100%;
-  max-width: 350px;
-  min-height: 380px;
+  min-height: 320px;
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
   gap: 1.2rem;
-
   box-shadow: 0 6px 16px rgba(0, 0, 0, 0.06);
-  overflow: hidden;
+  box-sizing: border-box;
 }
 
 .name {
@@ -37,7 +34,6 @@
   max-width: 220px;
   aspect-ratio: 1 / 1;
   margin: 0 auto;
-
   display: flex;
   align-items: center;
   justify-content: center;
@@ -50,29 +46,14 @@
   border-radius: 12px;
 }
 
-@media (min-width: 1024px) and (max-width: 1366px) {
+@media (max-width: 767px) {
   .card {
-    max-width: 300px;
-    min-height: 340px;
-    padding: 2.2rem 2rem;
-    gap: 1rem;
+    min-height: 260px;
+    padding: 2rem 1.5rem;
   }
 
   .imageFrame {
-    max-width: 180px;
-  }
-}
-
-@media (max-width: 1024px) {
-  .card {
-    max-width: 250px;
-    height: 300px;
-    min-height: unset;
-    padding: 2rem 1.8rem;
-  }
-
-  .imageFrame {
-    max-width: 145px;
+    max-width: 160px;
   }
 }
 
