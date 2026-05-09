@@ -12,8 +12,8 @@ export default function ImagesCard({ photo }) {
             className={styles.image}
             src={photo.image}
             alt={photo.name}
-            width={220}
-            height={220}
+            width={600}
+            height={600}
           />
         </div>
       </div>
