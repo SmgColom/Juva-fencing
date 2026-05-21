@@ -5,13 +5,15 @@ import Container from "@/components/common/Container/Container";
 
 export default function ContactSection() {
   return (
-    <section className={styles.wrapper}>
+    <section className={styles.wrapper} id="contact">
       <Container>
         <h2 className={styles.title}>Contact Us</h2>
+
         <div className={styles.ContactContainer}>
           <div className={styles.ContactForm}>
             <ContactForm />
           </div>
+
           <div className={styles.ContactInfo}>
             <ContactInfo />
           </div>

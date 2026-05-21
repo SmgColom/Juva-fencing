@@ -1,37 +1,31 @@
 import styles from "./ContactForm.module.scss";
-import { BsWhatsapp } from "react-icons/bs";
-import { MdEmail } from "react-icons/md";
-import { IoLocationOutline } from "react-icons/io5";
+import { FaPhoneAlt } from "react-icons/fa";
+import { FaLocationDot } from "react-icons/fa6";
+import { RiCalendarScheduleFill } from "react-icons/ri";
 import Image from "next/image";
 
 const ContactInfo = () => (
   <div className={styles.infoBox}>
     
-    {/* WhatsApp */}
     <div>
-      <a
-        href="https://wa.me/61415563521?text=Hi%21%20I%27d%20like%20to%20get%20more%20information%20about%20your%20cleaning%20service."
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        <div className={styles.contact__icon}><BsWhatsapp /></div>
-      </a>
-      <h3>WhatsApp</h3>
-      <p>415 563 521</p>
-      <p>466 674 743</p>
+        <div className={styles.contact__icon}><FaPhoneAlt /></div>
+      <h3>Phone</h3>
+      <p>0466674743</p>
     </div>
 
-    {/* Email */}
-    <div>
-      <a href="mailto:juvacleaning@gmail.com">
-        <div className={styles.contact__icon}><MdEmail /></div>
-      </a>
-      <h3>Email</h3>
-      <p>juvacleaning@gmail.com</p>
-      <h3>ABN Number</h3>
-      <p>57688775465</p>
-    </div>
 
+    <div>
+        <div className={styles.contact__icon}><FaLocationDot /></div>
+      <h3>Address</h3>
+      <p>Prahran VIC 3181, Australia</p>
+    </div>
+    <div>
+        <div className={styles.contact__icon}><RiCalendarScheduleFill /></div>
+      <h3>Operating Hours</h3>
+      <p>Monday-Friday: 7am - 5pm</p>
+      <p>Saturday: 9am - 5pm</p>
+      <p>Sunday: Closed</p>
+    </div>
 
   </div>
 );

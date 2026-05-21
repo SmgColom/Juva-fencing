@@ -7,24 +7,18 @@ export default function Hero() {
     <div className={styles.wrapper}>
       <div className={styles.content}>
         <div className={styles.left}>
-          <h1 className={styles.title}>Book Your First Clean Today!</h1>
+          <h1 className={styles.title}>Your expert fence builders</h1>
 
           <div className={styles.features}>
             <ul>
-              <li><FaCheck /> Trusted professionals</li>
-              <li><FaCheck /> Cleanliness and order</li>
-              <li><FaCheck /> Availability</li>
-            </ul>
-            <ul>
-              <li><FaCheck /> High attention to detail</li>
-              <li><FaCheck /> Open communication to understand your needs</li>
-              <li><FaCheck /> Order that makes everything look good</li>
+              <li><FaCheck /> With over 4 years of experience in the industry, we are committed to providing outstanding service.</li>
+              
             </ul>
           </div>
 
           {/* Botón siempre después de features */}
           <Button href="https://calendar.app.google/EHkcSF4JTVJWpuzJ8" target="_blank">
-            Book Now!
+            Free Quote!
           </Button>
         </div>
 

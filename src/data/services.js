@@ -1,4 +1,3 @@
-// src/data/services.js
 export const services = [
   {
     id: 1,

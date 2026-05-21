@@ -1,37 +1,157 @@
 @use "sass:color";
 @use '@/styles/scss/abstracts' as *;
 
+// ─── Wrapper ──────────────────────────────────────────────────────────────────
 .wrapper {
-  background-color: white;
-  padding: 3rem 0;
+  background-color: $primaryColor;
+  padding-bottom: 0rem;
   width: 100%;
 }
 
-.title {
-  text-align: center;
-  font-size: 3rem;
-  font-family: "Work Sans", sans-serif;
-  color: $complementaryColor;
-  margin-bottom: 3rem;
-
-  @media (max-width: 767px) {
-    font-size: 2.2rem;
-  }
+// ─── Banner ───────────────────────────────────────────────────────────────────
+.banner {
+  position: relative;
+  display: flex;
+  align-items: stretch;
+  min-height: 520px;
+  background-color: #000000;
+  margin-bottom: 4rem;
+  overflow: hidden;
 }
 
-.grid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 1.5rem;
+// ─── Container dentro del banner ──────────────────────────────────────────────
+.banner :global(.container) {
+  position: relative;
+  z-index: 2;
+  max-width: none !important;
+  margin: 0 !important;
+  flex-shrink: 0;
 
+  // Desktop grande: columnas lado a lado
+  width: 65%;
+  padding-left: clamp(2rem, 6vw, 6rem) !important;
+  padding-right: 0 !important;
+
+  // iPad Pro (1024px–1200px): layout vertical igual que tablet
+  @media (min-width: 1024px) and (max-width: 1200px) {
+    width: 100%;
+    padding-left: clamp(1.5rem, 4vw, 3rem) !important;
+    padding-right: clamp(1.5rem, 4vw, 3rem) !important;
+  }
+
+  // Tablet y móvil
   @media (max-width: 1023px) {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 1.5rem;
-  }
-
-  @media (max-width: 767px) {
-    grid-template-columns: 1fr;
-    gap: 1rem;
+    width: 100%;
+    padding-left: clamp(1.5rem, 4vw, 3rem) !important;
+    padding-right: clamp(1.5rem, 4vw, 3rem) !important;
   }
 }
 
+.bannerInner {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  min-height: 520px;
+  padding: 2rem 0;
+
+  // iPad Pro y tablet
+  @media (max-width: 1200px) {
+    min-height: auto;
+    padding: 3rem 0 280px;
+  }
+
+  @media (max-width: 767px) {
+    padding: 3rem 0 220px;
+  }
+}
+
+.bannerText {
+  color: white;
+  width: 100%;
+  max-width: 520px;
+  padding-right: 2rem;
+  box-sizing: border-box;
+
+  p {
+    font-size: 1rem;
+    line-height: 1.7;
+    color: rgba(255, 255, 255, 0.85);
+    margin-bottom: 1.2rem;
+
+    &:last-child { margin-bottom: 0; }
+
+    @media (max-width: 767px) {
+      font-size: 0.95rem;
+    }
+  }
+
+  // iPad Pro, tablet y móvil
+  @media (max-width: 1200px) {
+    max-width: 100%;
+    padding-right: 0;
+  }
+}
+
+.bannerTitle {
+  font-size: clamp(1.4rem, 2.5vw, 2.4rem);
+  font-family: "Work Sans", sans-serif;
+  font-weight: 700;
+  color: white;
+  line-height: 1.25;
+  margin-bottom: 1.5rem;
+
+  @media (max-width: 1200px) {
+    font-size: clamp(1.5rem, 3.5vw, 2rem);
+  }
+
+  @media (max-width: 767px) {
+    font-size: clamp(1.4rem, 5vw, 1.8rem);
+  }
+}
+
+// ─── Imagen ───────────────────────────────────────────────────────────────────
+.bannerImage {
+  position: absolute;
+  top: 0;
+  right: 12.5rem;
+  height: 100%;
+  z-index: 1;
+
+  // Desktop grande: mitad derecha
+  width: 35%;
+
+  &::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: 2;
+    background: linear-gradient(
+      to right,
+      #000000 0%,
+      rgba(0, 0, 0, 0.4) 30%,
+      transparent 60%
+    );
+  }
+
+  // iPad Pro (1024–1200px) y tablet: imagen abajo
+  @media (max-width: 1200px) {
+    width: 100%;
+    right: 0;
+    height: 260px;
+    top: auto;
+    bottom: 0;
+
+    &::after {
+      background: linear-gradient(
+        to bottom,
+        #000000 0%,
+        rgba(0, 0, 0, 0.5) 30%,
+        transparent 70%
+      );
+    }
+  }
+
+  @media (max-width: 767px) {
+    height: 200px;
+  }
+}

@@ -1,12 +1,13 @@
 import Head from "next/head";
+import Header from "../components/header/Header"
 import Hero from "../components/layout/Hero/Hero.jsx";
 import ServicesList from "../components/services/ServicesList.jsx";
-import ImageList from "../components/images/ImageList.jsx";
+import GalleryList from "../components/images/GalleryList.jsx";
 import TestimonyList from "../components/testimonies/TestimonyList.jsx";
-import CalculatorSection from "../components/calculator/CalculatorSection.jsx";
+import Qr from "../components/QRSection/Qr.jsx";
 import ContactSection from "../components/ContactSection/ContactSection.jsx";
 import Footer from "../components/Footer/Footer.jsx";
-import Qr from "../components/QRSection/Qr.jsx";
+
 
 
 export default function Home() {
@@ -84,14 +85,13 @@ export default function Home() {
           }}
         />
       </Head>
-
+      <Header />
       <Hero />
       <ServicesList />
       <TestimonyList />
-      <ImageList />
-       <CalculatorSection />
-      <ContactSection />
+      <GalleryList />
       <Qr />
+      <ContactSection />
       <Footer />
     </>
   );

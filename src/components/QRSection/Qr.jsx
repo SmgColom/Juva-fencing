@@ -1,36 +1,30 @@
-import Image from "next/image";
 import styles from "./Qr.module.scss";
 import Container from "@/components/common/Container/Container";
+import Button from "@/components/common/Button/Button";
 
 export default function Qr() {
   return (
-    <div className={styles.wrapper}>
+    <section className={styles.wrapper}>
       <Container>
-        <h2 className={styles.title}>Text Us</h2>
-        <h3 className={styles.subtitle}>Scan the QR code</h3>
+        <div className={styles.content}>
+          <h2 className={styles.title}>
+            Still not sure of what type of fence you want?
+          </h2>
 
-        <div className={styles.qrImages}>
-          <div className={styles.qrItem}>
-            <h4>Text Us</h4>
-            <Image
-              src="/QR1.png"
-              alt="QR code to send SMS option 1"
-              width={140}
-              height={140}
-            />
-          </div>
+          <h3 className={styles.subtitle}>
+            Call for a consultation and information regarding your options
+          </h3>
 
-          <div className={styles.qrItem}>
-            <h4>Text Us</h4>
-            <Image
-              src="/QR2.png"
-              alt="QR code to send SMS option 2"
-              width={140}
-              height={140}
-            />
+          <div className={styles.buttonWrapper}>
+            <Button
+              href="https://calendar.app.google/EHkcSF4JTVJWpuzJ8"
+              target="_blank"
+            >
+              Call now
+            </Button>
           </div>
         </div>
       </Container>
-    </div>
+    </section>
   );
 }
