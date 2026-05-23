@@ -1,4 +1,4 @@
-import styles from './ContactForm.module.scss';
+import styles from './Map.module.scss';
 
 export default function ContactForm() {
   return (

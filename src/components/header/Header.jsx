@@ -19,23 +19,30 @@ function Header() {
   }, []);
 
   useEffect(() => {
-    window.addEventListener("scroll", handleScroll, { passive: true });
+    handleScroll();
+
+    window.addEventListener("scroll", handleScroll);
+
     return () => window.removeEventListener("scroll", handleScroll);
   }, [handleScroll]);
 
   useLayoutEffect(() => {
     document.body.classList.toggle("menu-open", menuOpen);
     syncHeaderOffset();
+
     return () => document.body.classList.remove("menu-open");
   }, [menuOpen, syncHeaderOffset]);
 
   useEffect(() => {
     const onResize = () => syncHeaderOffset();
+
     window.addEventListener("resize", onResize);
-    const t = setTimeout(syncHeaderOffset, 50);
+
+    const timer = setTimeout(syncHeaderOffset, 50);
+
     return () => {
       window.removeEventListener("resize", onResize);
-      clearTimeout(t);
+      clearTimeout(timer);
     };
   }, [syncHeaderOffset]);
 
@@ -44,7 +51,9 @@ function Header() {
   return (
     <header
       ref={headerRef}
-      className={`${styles.header} ${scrolled ? styles.scrolled : ""} ${menuOpen ? styles.menuOpen : ""}`}
+      className={`${styles.header} ${scrolled ? styles.scrolled : ""} ${
+        menuOpen ? styles.menuOpen : ""
+      }`}
     >
       <div className={styles.brand}>
         <button
@@ -74,7 +83,12 @@ function Header() {
             >
               ✖️
             </button>
-            <img src="/Logo.png" alt="Logo grande" className={styles.modalImage} />
+
+            <img
+              src="/Logo.png"
+              alt="Logo grande"
+              className={styles.modalImage}
+            />
           </div>
         </div>
       )}
@@ -82,7 +96,7 @@ function Header() {
       <button
         type="button"
         className={styles.hamburger}
-        onClick={() => setMenuOpen((v) => !v)}
+        onClick={() => setMenuOpen((value) => !value)}
         aria-expanded={menuOpen}
         aria-controls="main-nav"
         aria-label={menuOpen ? "Cerrar menú" : "Abrir menú"}
@@ -92,15 +106,43 @@ function Header() {
         <span />
       </button>
 
-      <nav id="main-nav" className={`${styles.nav} ${menuOpen ? styles.active : ""}`}>
+      <nav
+        id="main-nav"
+        className={`${styles.nav} ${menuOpen ? styles.active : ""}`}
+      >
         <ul>
-          <li><Link href="/" onClick={closeMenu}>Home</Link></li>
-          <li><Link href="/about" onClick={closeMenu}>About</Link></li>
-          <li><Link href="/servicios/servicios" onClick={closeMenu}>Services</Link></li>
-          <li><Link href="/eventos" onClick={closeMenu}>Gallery</Link></li>
-          <li><Link href="/news/blog" onClick={closeMenu}>Contact</Link></li>
+          <li>
+            <Link href="#home" onClick={closeMenu}>
+              Home
+            </Link>
+          </li>
+
+          <li>
+            <Link href="#about" onClick={closeMenu}>
+              About
+            </Link>
+          </li>
+
+          <li>
+            <Link href="#services" onClick={closeMenu}>
+              Services
+            </Link>
+          </li>
+
+          <li>
+            <Link href="#projects" onClick={closeMenu}>
+              Projects
+            </Link>
+          </li>
+
+          <li>
+            <Link href="#contact" onClick={closeMenu}>
+              Contact
+            </Link>
+          </li>
+
           <li className={styles.callItem}>
-            <Link href="/contact" onClick={closeMenu}>Call 0466 674 743</Link>
+            <a href="tel:0466674743">Call 0466 674 743</a>
           </li>
         </ul>
       </nav>

@@ -3,6 +3,7 @@
 
 // ─── Wrapper ──────────────────────────────────────────────────────────────────
 .wrapper {
+  scroll-margin-top: var(--header-offset, 130px);
   background-color: $primaryColor;
   padding-bottom: 0rem;
   width: 100%;

@@ -1,14 +1,13 @@
 import { useState } from "react";
-import { services } from "../../data/services.js";
-import styles from "./ServicesList.module.scss";
+import styles from "./About.module.scss";
 import Container from "@/components/common/Container/Container";
 import Image from "next/image";
 
-export default function ServicesList() {
+export default function AboutList() {
   const [selected, setSelected] = useState(null);
 
   return (
-    <section className={styles.wrapper}>
+    <section id="about" className={styles.wrapper}>
 
       {/* ── Banner: texto izquierda + imagen derecha ── */}
       <div className={styles.banner}>

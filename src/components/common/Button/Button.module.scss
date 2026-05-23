@@ -10,13 +10,14 @@
   font-size: 1.2rem;
   cursor: pointer;
   color: $complementaryColor;
-  background-color: $brandColor;
-  border: 1px solid $brandColor;
+  background-color: transparent;
+  border: 1px solid #79cbe0;
+  color: #79cbe0;
   border-radius: 4px;
 
   &:hover, &:active {
-    background-color: $highlightColor;
-    border: 1px solid $highlightColor;
-    color: $complementaryColor;
+      background-color: #79cbe0;
+      color: #0a1f2e;
+      opacity: 1;
   }
 }

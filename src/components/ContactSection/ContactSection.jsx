@@ -1,5 +1,5 @@
 import styles from "./ContactSection.module.scss";
-import ContactForm from "./ContactForm";
+import Map from "./Map";
 import ContactInfo from "./ContactInfo";
 import Container from "@/components/common/Container/Container";
 
@@ -11,7 +11,7 @@ export default function ContactSection() {
 
         <div className={styles.ContactContainer}>
           <div className={styles.ContactForm}>
-            <ContactForm />
+            <Map />
           </div>
 
           <div className={styles.ContactInfo}>

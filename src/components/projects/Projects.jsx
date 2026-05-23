@@ -1,6 +1,6 @@
 import { useState } from "react";
 import Container from "@/components/common/Container/Container";
-import styles from "./GalleryList.module.scss";
+import styles from "./Projects.module.scss";
 
 const projects = [
   {
@@ -34,7 +34,7 @@ export default function GalleryList() {
   };
 
   return (
-    <section className={styles.wrapper}>
+    <section id="projects" className={styles.wrapper}>
       <Container>
         <h2 className={styles.title}>
           Check out a few of our projects

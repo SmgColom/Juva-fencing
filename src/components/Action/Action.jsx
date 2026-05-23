@@ -1,4 +1,4 @@
-import styles from "./Qr.module.scss";
+import styles from "./Action.module.scss";
 import Container from "@/components/common/Container/Container";
 import Button from "@/components/common/Button/Button";
 
@@ -17,10 +17,10 @@ export default function Qr() {
 
           <div className={styles.buttonWrapper}>
             <Button
-              href="https://calendar.app.google/EHkcSF4JTVJWpuzJ8"
+              href="tel:0466674743"
               target="_blank"
             >
-              Call now
+              Call 0466 674 743
             </Button>
           </div>
         </div>

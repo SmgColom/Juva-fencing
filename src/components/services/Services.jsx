@@ -1,9 +1,9 @@
-import styles from "./TestimonyList.module.scss";
+import styles from "./Services.module.scss";
 import Container from "@/components/common/Container/Container";
 
-export default function TestimoniesList() {
+export default function Services() {
   return (
-    <div className={styles.wrapper}>
+    <div id="services" className={styles.wrapper}>
       <Container>
         <h2 className={styles.title}>Services we provide</h2>
 

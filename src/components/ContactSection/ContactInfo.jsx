@@ -1,4 +1,4 @@
-import styles from "./ContactForm.module.scss";
+import styles from "./Map.module.scss";
 import { FaPhoneAlt } from "react-icons/fa";
 import { FaLocationDot } from "react-icons/fa6";
 import { RiCalendarScheduleFill } from "react-icons/ri";

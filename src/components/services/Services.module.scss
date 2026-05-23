@@ -2,6 +2,7 @@
 @use '@/styles/scss/abstracts' as *;
 
 .wrapper {
+  scroll-margin-top: var(--header-offset, 130px);
   background-color: $primaryColor;
   padding: 1rem 0;
   width: 100%;

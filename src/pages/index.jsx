@@ -1,30 +1,27 @@
 import Head from "next/head";
 import Header from "../components/header/Header"
-import Hero from "../components/layout/Hero/Hero.jsx";
-import ServicesList from "../components/services/ServicesList.jsx";
-import GalleryList from "../components/images/GalleryList.jsx";
-import TestimonyList from "../components/testimonies/TestimonyList.jsx";
-import Qr from "../components/QRSection/Qr.jsx";
+import Hero from "../components/Hero/Hero.jsx";
+import About from "../components/about/About.jsx";
+import Projects from "../components/projects/Projects.jsx";
+import Services from "../components/services/Services.jsx";
+import Action from "../components/Action/Action.jsx";
 import ContactSection from "../components/ContactSection/ContactSection.jsx";
 import Footer from "../components/Footer/Footer.jsx";
-
-
 
 export default function Home() {
   return (
     <>
       <Head>
-        <link rel="icon" href="/favicon.png" />
-        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
-        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
-        <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+        <link rel="shortcut icon" href="/favicon.ico?v=3" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png?v=3" />
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png?v=3" />
+        <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png?v=3" />
+        <link rel="manifest" href="/site.webmanifest?v=3" />
 
-        <title>
-          Professional Cleaning Services in Melbourne | Juva Cleaning
-        </title>
+        <title>Professional Fence Installation in Melbourne | Juva Fencing</title>
 
-        {/* 🔥 CANONICAL (CLAVE PARA SEO) */}
-        <link rel="canonical" href="https://juvacleaning.com.au" />
+        {/* CANONICAL */}
+        <link rel="canonical" href="https://juvafencing.com.au" />
 
         <meta
           name="google-site-verification"
@@ -33,44 +30,41 @@ export default function Home() {
 
         <meta
           name="description"
-          content="Juva Cleaning offers trusted, affordable home cleaning services in Melbourne. Regular, deep and end of lease cleaning tailored for seniors and busy households."
+          content="Juva Fencing offers professional fence installation in Melbourne. Residential and commercial fencing solutions built to last — timber, Colorbond, pool fencing and more."
         />
 
         <meta name="geo.region" content="AU-VIC" />
         <meta name="geo.placename" content="Melbourne" />
 
-        {/* 🔥 OPEN GRAPH */}
+        {/* OPEN GRAPH */}
         <meta
           property="og:title"
-          content="Professional Cleaning Services in Melbourne | Juva Cleaning"
+          content="Professional Fence Installation in Melbourne | Juva Fencing"
         />
         <meta
           property="og:description"
-          content="Reliable home cleaning services in Melbourne. Book regular, deep or end of lease cleaning with trusted professionals."
+          content="Expert fence installation in Melbourne. Timber, Colorbond, pool and commercial fencing. Quality workmanship, honest pricing."
         />
         <meta property="og:type" content="website" />
         <meta property="og:locale" content="en_AU" />
-
-        {/* 🔥 URL CORRECTA */}
-        <meta property="og:url" content="https://juvacleaning.com.au" />
-
-        {/* (opcional pero recomendado) */}
-        <meta property="og:image" content="https://juvacleaning.com.au/og-image.jpg" />
+        <meta property="og:url" content="https://juvafencing.com.au" />
+        <meta property="og:image" content="https://juvafencing.com.au/og-image.jpg" />
 
         <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-        {/* 🔥 JSON-LD (esto sube tu SEO local) */}
+        {/* JSON-LD */}
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
             __html: JSON.stringify({
               "@context": "https://schema.org",
               "@type": "LocalBusiness",
-              name: "Juva Cleaning",
-              url: "https://juvacleaning.com.au",
-              image: "https://juvacleaning.com.au/og-image.jpg",
+              name: "Juva Fencing",
+              url: "https://juvafencing.com.au",
+              image: "https://juvafencing.com.au/og-image.jpg",
+              telephone: "+61466674743",
               description:
-                "Professional home cleaning services in Melbourne including regular, deep and end of lease cleaning.",
+                "Professional fence installation in Melbourne including timber, Colorbond, pool and commercial fencing.",
               areaServed: {
                 "@type": "Place",
                 name: "Melbourne",
@@ -87,10 +81,10 @@ export default function Home() {
       </Head>
       <Header />
       <Hero />
-      <ServicesList />
-      <TestimonyList />
-      <GalleryList />
-      <Qr />
+      <About />
+      <Services />
+      <Projects />
+      <Action />
       <ContactSection />
       <Footer />
     </>
