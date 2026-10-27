@@ -20,7 +20,7 @@ export default function Hero() {
           </div>
 
           <Button
-            href="https://calendar.app.google/EHkcSF4JTVJWpuzJ8"
+            href="https://calendar.app.google/kV8RozFBMDAjw6Ga9"
             target="_blank"
           >
             Free Quote!

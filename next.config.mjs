@@ -10,10 +10,10 @@ const nextConfig = {
         has: [
           {
             type: "host",
-            value: "juva-cleaning.vercel.app",
+            value: "https://juva-fencing.vercel.app/",
           },
         ],
-        destination: "https://juvacleaning.com.au/:path*",
+        destination: "https://juva-fencing.vercel.app//:path*",
         permanent: true,
       },
 
@@ -23,10 +23,10 @@ const nextConfig = {
         has: [
           {
             type: "host",
-            value: "www.juvacleaning.com.au",
+            value: "https://juva-fencing.vercel.app/",
           },
         ],
-        destination: "https://juvacleaning.com.au/:path*",
+        destination: "https://juva-fencing.vercel.app/:path*",
         permanent: true,
       },
     ];

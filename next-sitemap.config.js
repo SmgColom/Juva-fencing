@@ -1,4 +1,4 @@
 module.exports = {
-  siteUrl: "https://juvacleaning.com.au",
+  siteUrl: "https://juva-fencing.vercel.app/",
   generateRobotsTxt: true,
 };

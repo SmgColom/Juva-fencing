@@ -3,7 +3,7 @@ User-agent: *
 Allow: /
 
 # Host
-Host: https://juvacleaning.com.au
+Host: https://juva-fencing.vercel.app/
 
 # Sitemaps
-Sitemap: https://juvacleaning.com.au/sitemap.xml
+Sitemap: https://juva-fencing.vercel.app/
