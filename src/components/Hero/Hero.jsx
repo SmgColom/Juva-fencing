@@ -8,7 +8,7 @@ export default function Hero() {
     <div id="home" className={styles.wrapper}>
       <div className={styles.content}>
         <div className={styles.left}>
-          <h1 className={styles.title}>Your expert fence builders</h1>
+          <h1 className={styles.title}>Your expert fence builders in Melbourne</h1>
 
           <div className={styles.features}>
             <ul>

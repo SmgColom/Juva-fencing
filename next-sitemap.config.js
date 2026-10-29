@@ -1,4 +1,5 @@
+/** @type {import('next-sitemap').IConfig} */
 module.exports = {
-  siteUrl: "https://juva-fencing.vercel.app/",
+  siteUrl: "https://juvafencing.com.au",
   generateRobotsTxt: true,
-};
+  generateIndexSitemap: false, 

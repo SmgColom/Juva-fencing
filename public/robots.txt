@@ -1,9 +1,0 @@
-# *
-User-agent: *
-Allow: /
-
-# Host
-Host: https://juva-fencing.vercel.app/
-
-# Sitemaps
-Sitemap: https://juva-fencing.vercel.app/
